@@ -1,0 +1,40 @@
+{
+    //
+    // Addon info
+    //
+    "extensionName" : {
+        "message" : "Wi-Fi QRコード生成器"
+    },
+    "extensionDescription" : {
+        "message" : "Wi-Fi QRコードを生成します"
+    },
+
+    //
+    // Messages
+    //
+    "menu_generatePsk" : {
+        "message" : "事前共有鍵としてQRコードを生成する"
+    },
+    "menu_generateSsid" : {
+        "message" : "SSIDとしてQRコードを生成する"
+    },
+
+    //
+    // User Interface
+    //
+    "ui_qrWifiTitle" : {
+        "message" : "Wi-Fi QRコード生成器"
+    },
+    "ui_qrWifiType" : {
+        "message" : "Type"
+    },
+    "ui_qrWifiSsid" : {
+        "message" : "SSID"
+    },
+    "ui_qrWifiPsk" : {
+        "message" : "事前共有鍵"
+    },
+    "ui_qrWifiHidden" : {
+        "message" : "非表示のAP"
+    }
+}

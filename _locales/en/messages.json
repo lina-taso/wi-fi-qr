@@ -1,0 +1,40 @@
+{
+    //
+    // Addon info
+    //
+    "extensionName" : {
+        "message" : "Wi-Fi QR code generator"
+    },
+    "extensionDescription" : {
+        "message" : "Generate Wi-Fi QR code"
+    },
+
+    //
+    // Messages
+    //
+    "menu_generatePsk" : {
+        "message" : "Generate QR w/text as Pre-Shared Key"
+    },
+    "menu_generateSsid" : {
+        "message" : "Generate QR w/text as SSID"
+    },
+
+    //
+    // User Interface
+    //
+    "ui_qrWifiTitle" : {
+        "message" : "Wi-Fi QR code generator"
+    },
+    "ui_qrWifiType" : {
+        "message" : "Type"
+    },
+    "ui_qrWifiSsid" : {
+        "message" : "SSID"
+    },
+    "ui_qrWifiPsk" : {
+        "message" : "Pre-shared key"
+    },
+    "ui_qrWifiHidden" : {
+        "message" : "Hidden AP"
+    }
+}
