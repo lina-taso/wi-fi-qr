@@ -10,32 +10,38 @@ browser.runtime.onMessage.addListener(qrWifiListener);
 const qr_html = `
 <style id="qr-wifi-window-style" type="text/css">
 #qr-wifi-window {
+  all: initial;
   position: fixed;
   z-index: 2147483647;
   box-sizing: border-box;
-  width: 300px;
-  max-width: 80%;
   left: 50%;
   top: 20%;
+  width: 300px;
+  max-width: 80%;
+  padding: 40px 10px 10px;
   transform: translate(-50%, 0);
-  padding: 20px;
-  border-radius: 20px;
+  border-radius: 10px;
   box-shadow: 0 0 10px black;
-  background: white;
+  box-sizing: border-box;
   color: dimgray;
+  background-color: white;
 }
 #qr-wifi-window * {
-  margin: initial;
-  padding: initial;
-  font: initial;
+  margin: 0!important;
   font-size: 14px;
-  line-height: 1.2em;
-  text-align: left;
+  font-weight: initial;
+  line-height: 1.3em;
+  font-family: "Hiragino Kaku Gothic ProN","メイリオ", sans-serif;
+  box-sizing: border-box;
 }
 #qr-wifi-window > * {
-  margin: 2px 0 4px;
+  margin: 2px 0 4px!important;
 }
-#qr-wifi-window select, #qr-wifi-window input {
+#qr-wifi-window select {
+  -moz-appearance: menulist;
+  border: 1px solid gray;
+}
+#qr-wifi-window input {
   border: 1px solid gray;
 }
 #qr-wifi-window label {
@@ -47,12 +53,20 @@ const qr_html = `
   text-align: center;
 }
 #qr-wifi-window-title {
-  background-color: dimgray;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  margin: 0!important;
+  padding: 2px 0;
   color: white;
+  background-color: gray;
   font-weight: bold;
-  text-align: center;
-  margin: 2px 0;
-  padding: 2px;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 #qr-wifi-window-applink {
   border: 1px solid gray;
@@ -60,20 +74,21 @@ const qr_html = `
   padding: 4px;
 }
 #qr-wifi-window-close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
   width: 20px;
   height: 20px;
+  margin: 0!important;
+  padding: 0;
+  border: 1px solid white;
+  background-color: dimgray;
+  color: white;
+  font-style: bold;
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: dimgray;
-  border: 1px solid white;
-  color: white;
-  font-style: bold;
-  line-height: initial;
-  cursor: pointer;
-  position: absolute;
-  top: 10px;
-  right: 10px;
 }
 </style>
 <div id="qr-wifi-window">
